@@ -1,0 +1,56 @@
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+  flex: 1;
+  padding: 16px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.light-theme {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --text-primary: #212529;
+  --text-secondary: #6c757d;
+  --primary-color: #E50914;
+  --accent-color: #FFD700;
+  --success-color: #28a745;
+  --warning-color: #fd7e14;
+  --error-color: #dc3545;
+  --border-color: #dee2e6;
+  --card-bg: #ffffff;
+  --seat-available: #28a745;
+  --seat-occupied: #dc3545;
+  --seat-selected: #007bff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme {
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --primary-color: #E50914;
+  --accent-color: #FFD700;
+  --success-color: #2fb380;
+  --warning-color: #f7941d;
+  --error-color: #e53935;
+  --border-color: #333333;
+  --card-bg: #1e1e1e;
+  --seat-available: #2fb380;
+  --seat-occupied: #e53935;
+  --seat-selected: #1976d2;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Apply theme variables to document */
+.app-container {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}

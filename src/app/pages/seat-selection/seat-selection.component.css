@@ -1,0 +1,278 @@
+.seat-selection-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.header {
+  margin-bottom: 24px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 0;
+  margin-bottom: 16px;
+  transition: opacity 0.2s;
+}
+
+.back-button:hover {
+  opacity: 0.8;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.movie-info {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.movie-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.showtime-info, .ticket-info {
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.screen-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.screen {
+  width: 80%;
+  height: 30px;
+  background-color: var(--accent-color);
+  color: var(--text-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  transform: perspective(300px) rotateX(-10deg);
+}
+
+.seats-container {
+  margin-bottom: 32px;
+  overflow-x: auto;
+}
+
+.seat-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  align-items: center;
+}
+
+.row-label {
+  width: 30px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-right: 8px;
+}
+
+.seat {
+  width: 36px;
+  height: 36px;
+  margin: 0 4px;
+  background-color: var(--seat-available);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.seat:hover:not(.occupied):not(.disabled) {
+  transform: scale(1.1);
+}
+
+.seat.occupied {
+  background-color: var(--seat-occupied);
+  cursor: not-allowed;
+}
+
+.seat.selected {
+  background-color: var(--seat-selected);
+  transform: scale(1.1);
+}
+
+.seat.disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.legend {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin: 0 16px;
+}
+
+.legend-seat {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.legend-seat.available {
+  background-color: var(--seat-available);
+}
+
+.legend-seat.selected {
+  background-color: var(--seat-selected);
+}
+
+.legend-seat.occupied {
+  background-color: var(--seat-occupied);
+}
+
+.selected-seats {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.selected-seats h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.seat-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.seat-tag {
+  background-color: var(--seat-selected);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.continue-btn {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.continue-btn:hover:not(:disabled) {
+  background-color: #c30812;
+}
+
+.continue-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.not-found {
+  max-width: 600px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 32px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+.not-found h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text-primary);
+}
+
+.not-found p {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+}
+
+.return-btn {
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+  .seats-container {
+    max-width: 100%;
+  }
+  
+  .seat {
+    width: 32px;
+    height: 32px;
+    margin: 0 2px;
+    font-size: 0.7rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .seat {
+    width: 28px;
+    height: 28px;
+    margin: 0 1px;
+    font-size: 0.6rem;
+  }
+  
+  .legend {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .legend-item {
+    margin: 4px 0;
+  }
+}

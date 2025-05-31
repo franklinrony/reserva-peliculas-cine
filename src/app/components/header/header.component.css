@@ -1,0 +1,111 @@
+.header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 16px 0;
+  box-shadow: 0 2px 4px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin-left: 24px;
+}
+
+.navigation a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+  position: relative;
+}
+
+.navigation a:hover {
+  opacity: 0.9;
+}
+
+.navigation a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--accent-color);
+}
+
+.theme-toggle button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Media queries para responsive */
+@media (max-width: 768px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  
+  .navigation {
+    order: 3;
+    width: 100%;
+    margin-top: 16px;
+  }
+  
+  .navigation ul {
+    justify-content: center;
+  }
+  
+  .navigation li:first-child {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 1.25rem;
+  }
+  
+  .navigation li {
+    margin-left: 16px;
+  }
+}
