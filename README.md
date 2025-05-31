@@ -1,6 +1,6 @@
 # 🎬 CineReserva
 
-[![Ver Demo en GitHub Pages](https://img.shields.io/badge/Demo-GitHub%20Pages-24292F?logo=github&logoColor=white&style=for-the-badge)](https://franklinrony.github.io/reserva-peliculas-cine/)
+[![Ver Demo en GitHub Pages](https://img.shields.io/badge/Demo-GitHub%20Pages-24292F?logo=github&logoColor=white&style=for-the-badge)](https://franklinrony.github.io/reserva-peliculas-cine/gh-pages/)
 
 ¡Bienvenido a **CineReserva**! 🍿
 
